@@ -1,97 +1,175 @@
+
 <!DOCTYPE html>
-<meta charset="utf-8">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<style>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Percepts | Technology consulting and products</title>
 
-    .node circle {
-        fill: #fff;
-        stroke: steelblue;
-        stroke-width: 1.5px;
-    }
+    <meta name="author" itemprop="author" content="Austin Poulton">
+    <meta itemprop="name" content="Percepts">
+    <meta name="description" content="Percepts - Java, Scala and Big Data analytics">
+    <meta name="keywords" content="percept, java, scala, analytics, big data,  web, data science, austin poulton">
 
-    .node {
-        font: 10px sans-serif;
-    }
+    <!--<meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="stuartgunter">
+    <meta name="twitter:creator" content="@stuartgunter">
+    <meta name="twitter:url" content="http://www.stuartgunter.org/index.html">
+    <meta name="twitter:title" content="Stuart Gunter - Blogging about tech stuff">
+    <meta name="twitter:description" content="Read more...">
+    -->
 
-    .link {
-        fill: none;
-        stroke: #ccc;
-        stroke-width: 1.5px;
-    }
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-</style>
+    <!-- Styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- <link href="css/percepts.css" rel="stylesheet">  -->
+
+     <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,500' rel='stylesheet' type='text/css'>
+
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .jumbotron.index {
+            background: url("/assets/img/nodes-gradient.svg") no-repeat center;
+            background-size: auto 100%;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 70px;
+            border-top: 1px solid #e5e5e5;
+            background-color: #f5f5f5;
+        }
+        .footer p {
+            margin-bottom: 0;
+            color: #777;
+        }
+        .footer-links {
+            margin: 10px 0;
+        }
+        .footer-links li {
+            display: inline;
+            padding: 0 2px;
+        }
+        .footer-links li:first-child {
+            padding-left: 0;
+        }
+    </style>
+</head>
+
 <body>
-<script src="js/d3.js"></script>
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <span class="overlay"></span>
     <div class="container">
+        <a href="index.html" class="navbar-brand">
+            Percepts
+        </a>
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Percept</a>
+
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
-        </div><!--/.navbar-collapse -->
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+
+            <li><a href="about.html"> About </a></li>
+                <li><a href="consulting.html"> Consulting </a></li>
+                <li><a href="training.html"> Training </a></li>
+                <li><a href="contact.html">Contact </a></li>
+                <li><a href="open-source.html">Open Source</a></li>
+            </ul>
+        </nav>
     </div>
-</nav>
+</div>
+
+<div class="container">
+
+
+    <a class="pull-left">
+        <img class="media-object" src="resources/percept-logo-sm.png" height="100px">
+    </a>
+    <div class="content">
+
+
+        <div class="jumbotron index">
+            <div class="container">
+
+                <h4> Coherence cache performance analysis </h4>
+                <p>  The following report extract for an investment bank that identifies performance issues with a complex cache model.
+                     It also includes best practice advice for clustering and key strategy.  Please <a href="contact.html">contact</a> us for technical assessment of your caching strategy and technology
+                </p>
+                <p><a class="btn btn-primary btn-lg" href="resources/Coherence%20cache%20-%20Technical%20Report%20Excerpts.pdf">Read more &raquo;</a></p>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <h4>Consulting Services</h4>
+                <p> Percepts offers consulting services for Proof of Concept (Spikes) solutions and technical assessments, with a focus on data grid and big data applications and use cases.
+                    </p>
+                <p><a href="consulting.html" class="btn btn-primary">Read More</a></p>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Kibana 4 and Elastic Search</h4>
+
+                <p> We love making data beautiful and that is why we really like the recently released Kibana 4. We are currently doing proof of concept work with ElasticSearch and Kibana with some large datasets
+                    for transaction monitoring and trade data analysis applications.  Watch this space and our open-source git repositories for developments.
+                    For more information on whats new in Kibana 4 why don't you check out the webinar?
+                </p>
+                <p><a href="http://www.elasticsearch.com/webinars/whats-new-in-kibana-4" class="btn btn-primary">Read More</a></p>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Scalable micro-service architectures</h4>
+                <p> We have experience with restful, stateless services architectures that offer horizontal scalability for systems that are required to support a large number of concurrent users or transactions.
+                    We leverage technologies like PlayFramework and Akka provide highly scalable and intuitive models for reactive based systems.
+                </p>
+
+            </div>
+
+        </div>
+        <hr/>
+        <p>
+         PlayFramework adn Akka are trademarks of TypeSafe.  Elasticsearch is a trademark of Elasticsearch BV, registered in the U.S. and in other countries </p>
+    </div>
+
+</div> <!-- /container -->
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; Percept Ltd 2014. Registered in the UK (08168113) </p>
+
+    </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 <script>
-
-    var width, height;
-    width = 960;
-    height = 2200;
-
-    var cluster = d3.layout.cluster()
-            .size([height, width - 160]);
-
-    var diagonal = d3.svg.diagonal()
-            .projection(function(d) { return [d.y, d.x]; });
-
-    var svg = d3.select("body").append("svg")
-            .attr("width", width)
-            .attr("height", height)
-            .append("g")
-            .attr("transform", "translate(40,0)");
-
-    d3.json("data/flare.json", function(error, root) {
-        var nodes = cluster.nodes(root),
-                links = cluster.links(nodes);
-
-        var link = svg.selectAll(".link")
-                .data(links)
-                .enter().append("path")
-                .attr("class", "link")
-                .attr("d", diagonal);
-
-        var node = svg.selectAll(".node")
-                .data(nodes)
-                .enter().append("g")
-                .attr("class", "node")
-                .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
-
-        node.append("circle")
-                .attr("r", 4.5);
-
-        node.append("text")
-                .attr("dx", function(d) { return d.children ? -8 : 8; })
-                .attr("dy", 3)
-                .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
-                .text(function(d) { return d.name; });
-    });
-
-    d3.select(self.frameElement).style("height", height + "px");
-
+    !function ($) {
+        $(function(){
+            $('#myCarousel').carousel()
+        })
+    }(window.jQuery)
 </script>
+
+
+</body>
+</html>
